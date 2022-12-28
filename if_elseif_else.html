@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript - Variables</title>
+</head>
+
+<body style="background-color: darkgreen; color: azure;">
+  <!-- Content here -->
+  <div id="result"></div>
+</body>
+
+<!-- Scripts goes here -->
+<script>
+  'use strict'
+
+  /*
+  Very often when you write code, you want to perform different actions for different decisions.
+  
+  You can use conditional statements in your code to do this.
+  
+  In JavaScript, there are three forms of the if...else statement.
+  
+      if statement
+      if...else statement
+      if...else if...else statement
+      
+      Use 'if' to specify a block of code to be executed, if a specified condition is true
+      Use 'else' to specify a block of code to be executed, if the same condition is false
+      Use 'else if' to specify a new condition to test, if the first condition is false
+  
+  -------------------------------------------
+  The 'if' Statement
+  Use the if statement to specify a block of JavaScript code to be executed if a condition is true.
+  The if statement executes a statement if a specified condition is truthy. 
+  If the condition is falsy, another statement in the optional else clause will be executed.
+  
+  if (condition) {
+    //  block of code to be executed if the condition is true
+  } 
+  
+  Example:
+  Make a "Good day" greeting if the hour is less than 18:00:
+  
+  let hour = 13
+  if (hour < 18) {
+    greeting = "Good day";
+  } 
+  
+  -------------------------------------------
+  The 'else' Statement
+  Use the else statement to specify a block of code to be executed if the condition is false.
+  
+  if (condition) {
+    //  block of code to be executed if the condition is true
+  } else {
+    //  block of code to be executed if the condition is false
+  }
+  
+  Example:
+  If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
+  
+  let hour = 20
+  if (hour < 18) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  
+  -------------------------------------------
+  The else if Statement
+  Use the else if statement to specify a new condition if the first condition is false.
+  
+  if (condition1) {
+    //  block of code to be executed if condition1 is true
+  } else if (condition2) {
+    //  block of code to be executed if the condition1 is false and condition2 is true
+  } else {
+    //  block of code to be executed if the condition1 is false and condition2 is false
+  }
+  
+  Example:
+  If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":
+  
+  let time = 20
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  
+  
+  */
+
+  /*
+  Task 1 - if Statement
+  --------
+  Check if the number is positive
+  
+  * Declare a variable with a positive number first
+  * Create a simple if-statement which prints out the message 'The number is positive.'
+  * Run it.
+  * Change the number to negative and run it again.
+  * Explain why the second run is not displayed the message.
+  */
+  let number_1 = -7
+  if (number_1 > 0){
+    console.log('The number is positive.')
+  }
+
+
+  /*
+  Task 2 - if..else Statement
+  --------
+  Check if the number is positive
+  
+  * Declare a variable with a positive number first.
+  * Create an if..else statement which prints out the message 'The number is positive.' when the number is positive. 
+    Otherwise prints out the 'The number is either a negative number or 0.'
+  * Run it.
+  * Change the number to negative and run it again.
+  * Explain that what happened in both case.
+  */
+  let number_2 = -4
+  if (number_2 > 0){
+    console.log('The number2 is positive.')
+  } 
+  else {
+    console.log("The number2 is either a negative number or 0.")
+  }
+
+
+  /*
+  Task 3 - if..else if..else Statement
+  --------
+  Check if the number is positive
+  
+  * Declare a variable with a positive number first.
+   * Create an if..else if..else statement which prints out the message 'The number is positive.' when the number is positive. 
+     But when the number is 0 then it print out the message 'The number is 0.' 
+     Otherwise prints out the 'The number is negative.'
+  * Run it.
+  * Change the number to negative and run it again.
+  * Explain that what happened in both case.
+  */
+  let number_3 = 0
+  if (number_3 > 0){
+    console.log('The number3 is positive.')
+  } 
+  else if (number_3 == 0){
+    console.log("The number3 is 0.")
+  }
+  else {
+    console.log("The number3 is negative.")
+  }
+
+
+
+
+
+  /*
+  Task 4 *
+  -------
+  In this task we will learn about if-elseif-else statement.
+  As a base for the task we will declare and initialize some variables to use them later.
+  The task itself is about simulating a fight between two pokemon.
+  
+  * Declare two variables with the pokemons name.
+  * Declare 2 variables the health of the pokemons.
+  * Declare 2 variables the attack-power of the pokemons.
+  * We gives you a random number generator for a variable which will decide at the begining
+    that which pokemon starts the fight. Result 0 mean first pokemon is faster and 1 mean second pokemon start.
+  
+  */
+  let pokemon_start = (Math.random() >= 0.5) ? 1 : 0;
+
+  // console.log(pokemon_start)
+
+
+
+</script>
+
+</html>

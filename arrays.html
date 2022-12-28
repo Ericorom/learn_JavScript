@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript - Arrays</title>
+</head>
+
+<body style="background-color: darkgreen; color: azure;">
+    <!-- Content here -->
+    <div id="result"></div>
+</body>
+
+<!-- Scripts goes here -->
+<script>
+    'use strict'
+    // anything here must be written in JavaScript 2015+
+
+    /*
+    If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+    let car1 = "Saab";
+    let car2 = "Volvo";
+    let car3 = "BMW";
+
+    However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+
+    The solution is an array!
+
+    An array can hold many values under a single name, and you can access the values by referring to an index number.
+    
+    An array is a special variable, which can hold more than one value: */
+    const cars = ["Saab", "Volvo", "BMW"];
+    console.log(cars)
+    /*
+    You can also create an array, and then provide the elements:
+    Example:
+    */
+    const cars1 = [];
+    cars1[0]= "Saab";
+    console.log(cars1)
+    cars1[1]= "Volvo";
+    cars1[2]= "BMW";
+    console.log(cars1)
+    /*
+    ----------------------------------------------------------------------------------------------
+    Accessing Array Elements
+
+    You access an array element by referring to the index number: */
+    const cars2 = ["Saab", "Volvo", "BMW"];
+    let car = cars2[0];
+    console.log(car)
+    /*
+    Note: Array indexes start with 0.
+    [0] is the first element. [1] is the second element.
+    */
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    Changing an Array Element
+
+    This statement changes the value of the first element in cars:
+    cars[0] = "Opel";
+    Example:
+    */
+    let cars3 = ["Saab", "Volvo", "BMW"];
+    cars3[0] = "Opel";
+    console.table(cars3)
+    
+    /*
+    ----------------------------------------------------------------------------------------------
+    Access the Full Array
+
+    With JavaScript, the full array can be accessed by referring to the array name:
+    Example: */
+    let cars4 = ["Saab", "Volvo", "BMW"];
+    document.getElementById("result").innerHTML = cars4;
+    
+    /*
+    ----------------------------------------------------------------------------------------------
+    Array Properties and Methods
+
+    The real strength of JavaScript arrays are the built-in array properties and methods:
+    cars.length   // Returns the number of elements
+    cars.sort()   // Sorts the array
+    -------------------
+    The length Property
+    The length property of an array returns the length of an array (the number of array elements).
+    Example:
+    */
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let length = fruits.length;
+
+    console.log(fruits.length)
+    console.log(length)
+    console.log(fruits.sort())
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    Accessing the First Array Element
+    Example:
+    */
+    const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit_first = fruits2[0];
+    console.log(fruit_first)
+    
+    /*
+    ----------------------------------------------------------------------------------------------
+    Accessing the Last Array Element
+    Example:
+    */
+    const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit_last = fruits3[fruits.length -1];
+    console.log(fruit_last)
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    Adding Array Elements
+
+    The easiest way to add a new element to an array is using the push() method:
+    Example: */
+    const fruits4 = ["Banana", "Orange", "Apple"];
+    fruits4.push("Lemon");  // Adds a new element (Lemon) to fruits
+    console.log(fruits4)
+
+    /*
+    New element can also be added to an array using the length property:
+    Example: */
+    const fruits5 = ["Banana", "Orange", "Apple"];
+    fruits5[fruits5.length] = "Lemon";  // Adds "Lemon" to fruits 
+    console.log(fruits5)
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    Useful Methods for Arrays
+    
+    -------------
+    .at(index)
+    Returns the array item at the given index. Accepts negative integers, which count back from the last item.
+    */
+    const array0 = [5, 12, 8, 130, 44];
+    let index = 2;
+    console.log('.at(index) example 1 result: ' + array0.at(index))
+    let index2 = -2;
+    console.log('.at(index) example 1 result: ' + array0.at(index2))
+
+    /*
+    -------------
+    .concat()
+    The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array. 
+    */
+    const array1 = ['a', 'b', 'c'];
+    const array2 = [1, 2, 3];
+    const array3 = array1.concat(array2);
+    console.log(array3);
+
+    /*
+    -------------
+    .includes()
+    The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate. 
+    */
+    const array4 = [1, 2, 3];
+    console.log(array4.includes(2));
+
+    const pets = ['cat', 'dog', 'bat'];
+    console.log(pets.includes('cat'));
+    console.log(pets.includes('rat'));
+
+    if( pets.includes('rat') ){
+        console.log('woof woof')
+    }else{
+        console.log('meow meow')
+    }
+    /*
+    -------------
+    .indexOf()
+    The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present. 
+    */
+    console.log(pets.indexOf('bat'));
+
+    /*
+    -------------
+    .join()
+    The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), 
+    separated by commas or a specified separator string. 
+    If the array has only one item, then that item will be returned without using the separator.  
+    */
+    const elements = ['Fire', 'Air', 'Water'];
+    console.log(elements.join());
+    console.log(elements.join(' '));
+    console.log(elements.join('-'));
+
+    /*
+    -------------
+    .push()
+    The push() method adds one or more elements to the end of an array and returns the new length of the array.  
+    */
+    const animals = ['pigs', 'goats', 'sheep'];
+    console.log(animals);
+    animals.push('chickens', 'cats', 'dogs');
+    console.log(animals);
+
+    /*
+    -------------
+    .unshift()
+    The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.   
+    */
+    const colors = ['yellow', 'green', 'white'];
+    console.log(colors)
+
+    colors.unshift('purple', 'black')
+    console.log(colors)
+
+    /*
+    -------------
+    .pop()
+    The pop() method removes the last element from an array and returns that element. This method changes the length of the array. 
+    */
+    const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+    console.log(plants);
+    console.log(plants.pop());
+    console.log(plants);
+
+    plants.pop();
+    console.log(plants);
+
+    /*
+    -------------
+    .shift()
+    The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array. 
+    */
+    const numbers = ['one', 'two', 'three'];
+    console.log(numbers);
+    console.log(numbers.shift());
+    console.log(numbers);
+
+    numbers.shift()
+    console.log(numbers);
+
+    // .reverse() , .toString() ....
+
+
+    /**
+    ---------------------
+    Harry Potter TASK :)
+    ---------------------
+    You are a first grade beginner magician student at Hogwarts. 
+    It's time to learn and use magic spells.
+    At the class your teachers show many different magic spells
+    in the past months, but you don't remember all perfectly because
+    you late from many classes.
+    Tomorrow you have to show your knowledge on an exam, 
+    so you have no choice but to risk getting hurt when you try to 
+    pronounce the tricky syllables of the magic-words under the learning time.
+    Be careful...
+
+    Here is the only one magic-word what you know well.
+
+    'Wingardium Leviosa' - Causes an object to levitate
+
+    And the way to pronounce the syllables.
+    */
+    
+    let spell_1 = ['Win','gar','di','um',' ','Le','vi','osa']
+    
+    //now you try to pronounce it well, but first must connect the syllables
+    let spell_1_pronounce = spell_1.join('')
+    if(spell_1_pronounce == 'Wingardium Leviosa'){
+        console.log('you did well')
+    }else{
+        console.log('ouch')
+    }
+
+    /*
+    ----------
+    Here is some magic-word which you roughly remember, so you have to fix them
+    before you pronounce without harm yourself.
+    */
+
+    /*
+    PLAYGROUND
+
+    */
+
+</script>
+
+</html>

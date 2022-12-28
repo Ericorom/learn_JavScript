@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript - Variables</title>
+</head>
+
+<body style="background-color: darkgreen; color: azure;">
+    <!-- Content here -->
+    <div id="result"></div>
+</body>
+
+<!-- Scripts goes here -->
+<script>
+    'use strict'
+    // anything here must be written in JavaScript 2015+
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    DECLARE a variable
+
+    Creating a variable in JavaScript is called "declaring" a variable. 
+        Example:
+            let carName;
+
+    The general rules for declare names for variables (unique identifiers) are:
+        Names can contain letters, digits, underscores, and dollar signs.
+        Names must begin with a letter.
+        Names can also begin with $ and _ .
+        Names are case sensitive (y and Y are different variables).
+        Reserved words (like JavaScript, let, const, function ...etc keywords) cannot be used as names.
+
+    In computer programs, variables are often declared without a value. The value can be something that has to be calculated, 
+    or something that will be provided later, like user input.
+    A variable declared without a value will have the value undefined.
+        Example:
+            let carName;
+            console.log(carName)  -> it will be 'undefind'
+
+    You cannot re-declare a variable declared with let or const.
+        Example (this will not work):
+            let carName = "Volvo";
+            let carName;
+    ----------------------------------------------------------------------------------------------
+    ASSIGN / INITIALIZE a variable
+
+    After the declaration, the variable has no value (technically it is undefined).
+
+    To assign a value to the variable, use the equal sign (=)
+        Example:
+            carName = "Volvo";
+
+    You can also assign a value to the variable when you declare it:
+        Example:
+            let carName = "Volvo";
+
+    You can declare many variables in one statement.
+    Start the statement with 'let' and separate the variables by comma.
+        Example:
+            let person = "John Doe", carName = "Volvo", price = 200;
+    
+    But the best practice is declare variables in multiple lines:
+        Example:
+            let person = "John Doe"
+            let carName = "Volvo",
+            let price = 200;
+    
+    Change a variable
+    Once you initialize a variable, you can change its value by assigning a different value. 
+        Example:
+            let message = "Hello";
+            message = 'Bye';
+            console.log(message) -> it will display 'Bye'
+
+    Types of primitive variables:
+        let myvariable = 1;  // numeric value
+        let myvariable = 1.1; // decimal value
+        let myvariable = 'one'; // string value
+        let myvariable = true; // Boolean value
+        let myvariable = null; // null value
+    
+    A constant holds a value that doesn’t change. To declare a constant, you use the const keyword. 
+    When defining a constant, you need to initialize it with a value. 
+        Example:
+            const workday = 5;
+
+    ----------------------------------------------------------------------------------------------
+    Points to Remember
+
+    * Variable stores data value that can be changed later on.
+    * Variables can be defined using let, var, const keyword.
+    * Variables must be initialized before accessing it.
+    * Multiple variables can be defined in a single line separated by a comma. But it is not a good practice.
+    * JavaScript is a loosely-typed language, so a variable can store any type value.
+    * Variable names are case-sensitive.
+    * Variable names can contain letters, digits, or the symbols $ and _. It cannot start with a digit 0 - 9.
+   
+    */
+
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    -------------------------------------- TASKS -------------------------------------------------
+    ----------------------------------------------------------------------------------------------
+    */
+
+    /*
+    Task 1
+    ------
+    In this task we want you to:
+        1 - Declare a variable called myName.
+        2 - Initialize myName with a suitable value, on a separate line (you can use your actual name, or something else).
+        3 - Declare a variable called myAge and initialize it with a value, on the same line.
+    */
+    let myName 
+    myName = "Ericorom"
+    let myAge = 8.7
+
+
+    /*
+    Task 2
+    ------
+    In this task you need to add a new line to correct the value stored in the existing 'my_Name' variable to your own name.
+    */
+    let my_Name = 'Paul';
+    my_Name = 'Ericorom'
+    console.log(my_Name)
+    
+    
+    /*
+    Task 3
+    ------
+    In this task you need to concat (add) the first tree variable to make a correct sentence and assign that to the variable 'result'.
+    */
+    let variableOne = 'when my code '
+    let variableTwo = 'I am happy '
+    let variableThree = 'finally works! '
+
+    let result
+    result = variableTwo + variableOne + variableThree
+
+    console.log(result)
+
+
+    /*
+    Task 4
+    ------
+
+    In a restaurant the waitress want to write a program to sum the customers bill at end of the evening faster.
+    But at the same time he wants to get some useful information based on data he knows.
+    Help him in this task. 
+    See what data he can share with you:
+    He knows the price of the drinks and foods and that how many people ordered food or drink. 
+    Also he knows how many table is in the restaurant and how many customer visited the restaurant this evening.
+    
+    * He telling you there is 5 table.
+    * The food price is 15 euro.
+    * The drink price is 3 euro.
+    * He remembers 55 people visited the restaurant and everybody ordered at least food or drink.
+    * From 55 customer 27 ordered food.
+    * From 55 customer 38 ordered drink.
+
+    Answer the following questions:
+    -------------------------------
+    1 - How much the customers paid for all drink?
+    2 - How much the customers paid for all food?
+    3 - How much the customers paid for both food and drink?
+    4 - How many customers ordered both food and drink?
+    5 - How much those customers paid overall who ordered both drink and food?
+    6 - How much was the average food-consumption per table?
+
+    Write your code below to calculate/get these informations.
+    */
+    console.log()
+
+    const TABLES = 5
+    const PRICE_FOOD = 15
+    const PRICE_DRINK = 3
+    const PEOPLE = 55
+    const FOOD_ORDER = 27
+    const DRINK_ORDER = 38
+
+    let all_drink_price
+    all_drink_price = DRINK_ORDER * PRICE_DRINK
+
+    console.log('Answer of Question ' + 1 + ' : ' + all_drink_price + ' euro.')
+    // console.log(`Answer of Question 1 '' "" : ${all_drink_price} euro.`)
+
+    let all_food_price
+    all_food_price  = FOOD_ORDER * PRICE_FOOD
+
+    console.log('Answer of Question ' + 2 + ' : ' + all_food_price + ' euro.')
+    
+    console.log('Answer of Question ' + 3 + ' : ' + (all_drink_price + all_food_price) + ' euro.')
+
+    let both_food_drink = (FOOD_ORDER + DRINK_ORDER) - PEOPLE
+
+    console.log('Answer of Question ' + 4 + ' : ' + both_food_drink + ' people.')
+
+
+
+
+</script>
+
+</html>
