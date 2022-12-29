@@ -64,8 +64,9 @@
     const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
     let text = "";
     for (let i = 0; i < cars.length; i++) {
-        text += cars[i] + "<br>";
+        text= text + cars[i] + ", ";
     }
+    console.log(text)
 
     /*
     JavaScript Infinite for loop
@@ -118,13 +119,13 @@
     For example, you want to loop through a list of numbers and perform a series of operations on each number.
     Nested loop example: 
     */
-    /*
+    
     for (var i = 0; i < 5; i++) {
         for (var j = 0; j < 5; j++) {
             console.log(i + "-" + j);
         }
     }
-    */
+    
 
     /*
     ----------------------------------------------------------------------------------------------
@@ -155,20 +156,31 @@
     Display the text "JavaScript is fun." five times.
 
     */
-
+    for(let i = 0; i < 5; i= i+1){
+        console.log( (i+1)  +  " JavaScript is fun.")
+    }
     /*
     Task 2
     ------
     Display Numbers from 1 to 5.
 
     */
-
+    for (let i = 1; i <= 5; i++) {
+        console.log( i)
+    }
     /*
     Task 3
     ------
     Display Numbers from 1 to 10 but skip to print the number 4 and 8.
 
     */
+    for (let i = 1; i <= 10; i++) {
+        if(i == 4 || i == 8) {
+            continue
+        }
+        console.log( i)
+    }
+
 
     /*
     Task 4
@@ -176,8 +188,19 @@
     Display the sum of numbers from 1 to 10.
      
     */
+   let sum =0
+    for(let x=1; x<=10; x++){
+        sum = sum + x
+    } 
+    console.log(sum)
 
 
+    let myArray = []
+
+    for(let i=0; i< 1500; i++){
+        myArray.push(i+10)
+    }
+    console.log(myArray)
 
 </script>
 
