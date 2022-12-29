@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript - For Loop</title>
+</head>
+
+<body style="background-color: darkgreen; color: azure;">
+    <!-- Content here -->
+    <div id="result"></div>
+</body>
+
+<!-- Scripts goes here -->
+<script>
+    /*
+    
+    What is a loop?
+    -------------------------------
+    A loop is a control flow statement that is used to execute a block of code over and over again until the condition given in the loop is true.
+    In simple words, a loop is a block of code that is executed over and over again until a condition is met. The condition is called a loop condition and it is given in the loop.
+    
+    Why do we use loops?
+    -------------------------------
+    The most common use of loops is to repeat a block of code a number of times.
+
+    The syntax of the for loop
+    -------------------------------
+    for (initialization; condition; iteration) {
+        // code block to be executed
+    }
+
+    ↓↓↓
+
+    * Initialization is executed (one time) before the execution of the code block. 
+    
+    * Condition defines the condition for executing the code block. It is a statement that returns true or false, 
+      and if the condition is true then the code block of the loop body is executed, if the condition is false then the loop breaks.
+    
+    * Iteration is executed (every time) after the code block has been executed. In this part, the counter of for loop is updated.
+
+    More information : https://www.w3schools.com/js/js_loop_for.asp
+
+    Loops are very useful while programming, it is one of the most used features of any programming language.
+    For example, if we want to print "Hello, World!" 10 times then instead of writing printing code for 10 times we can use a loop and write the code once:
+    */
+    for (let i = 0; i < 10; i++) {
+        console.log((i + 1) + '- Hello World!')
+    }
+
+    /*
+    Loops are handy, if you want to run the same code over and over again, each time with a different value.
+    Often this is the case when working with arrays.
+
+    For example, instead of writing the code below:
+        text += cars[0] + "<br>";
+        text += cars[1] + "<br>";
+        text += cars[2] + "<br>";
+        text += cars[3] + "<br>";
+        text += cars[4] + "<br>";
+        text += cars[5] + "<br>";
+
+    Just use a for loop...
+    */
+    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    let text = "";
+    for (let i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+    }
+
+    /*
+    JavaScript Infinite for loop
+    -------------------------------
+
+    If the test condition in a for loop is always true, it runs forever (until memory is full). 
+    For example:
+
+    for(let i = 1; i > 0; i++) {
+        // block of code
+    }
+
+    In the above program, the condition is always true which will then run the code for infinite times.
+    
+    !!! We always have to try avoid infinite loops !!!
+    */
+
+    /*
+    How to Break or Continue a For Loop Operation
+    ---------------------------------------------
+    So far, we have seen how to create a for loop, but it’s also important to mention that we can break out of a loop using break. 
+    The break statement is used to terminate the loop immediately when it is encountered.
+    */
+
+    for (let i = 1; i <= 10; i++) {
+        if (i == 5) {
+            break;
+        }
+        console.log(i);
+    }
+
+    /*
+    The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+    In this example skips the value of 3:
+    */
+    for (let i = 0; i < 10; i++) {
+        if (i === 3) {
+            continue;
+        }
+        text = "The number is " + i;
+        console.log(text)
+    }
+
+
+    /*
+    Nested for loop in javascript
+    -------------------------------
+    You can use for loop inside another for loop. This is called nested for loop.
+    Nested loops are useful when you want to loop through a list of items and then do something with each item. 
+    For example, you want to loop through a list of numbers and perform a series of operations on each number.
+    Nested loop example: 
+    */
+    /*
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < 5; j++) {
+            console.log(i + "-" + j);
+        }
+    }
+    */
+
+    /*
+    ----------------------------------------------------------------------------------------------
+    Types of loops in javascript
+ 
+    JavaScript has various different kinds of loops. Here is a list of them.
+ 
+    * for loop: Loop that repeats a block of code for a specified number of times. 
+
+    * for...in: Loop that repeats a block of code for each property of an object. 
+        The for...in loop is used to iterate over the properties of an object. It is also used to iterate over an array.
+
+    * for...of: Loop that is used to loop through iterable like Array, String, etc
+        The for...of loop is used to iterate over the elements of an array. It is also used to iterate over an iterable object like an array, strings, NodeList, arguments, etc.
+
+    * while: A loop that repeats a block of code while a given condition is true. 
+        See it in next tutorial.
+
+    * do...while: This also execute a block of code until a given condition is true but it executes the block of code at least once. 
+        See it in next tutorial.
+ 
+    */
+
+
+    /*
+    Task 1
+    ------
+    Display the text "JavaScript is fun." five times.
+
+    */
+
+    /*
+    Task 2
+    ------
+    Display Numbers from 1 to 5.
+
+    */
+
+    /*
+    Task 3
+    ------
+    Display Numbers from 1 to 10 but skip to print the number 4 and 8.
+
+    */
+
+    /*
+    Task 4
+    ------
+    Display the sum of numbers from 1 to 10.
+     
+    */
+
+
+
+</script>
+
+</html>
