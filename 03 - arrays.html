@@ -108,7 +108,7 @@
     Example:
     */
     const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
-    let fruit_last = fruits3[fruits.length -1];
+    let fruit_last = fruits3[fruits3.length -1];
     console.log(fruit_last)
 
     /*
@@ -175,7 +175,9 @@
     The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present. 
     */
     console.log(pets.indexOf('bat'));
-
+    if(pets.indexOf('dog')==-1){
+        console.log('not found')
+    }
     /*
     -------------
     .join()
