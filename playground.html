@@ -8,7 +8,8 @@
 <body style="background-color: rgb(100, 85, 231); color: rgb(0, 0, 0);">
     <!-- Content here -->
     <div id="result"></div>
-    <h1 style="color: yellow;">Welcome to <span style="font-size: 1.5em; color:black;">Minecraft</span> </h1> 
+    <h1 style="color: yellow;"><span id="welcomeSpan">Login to </span><span
+            style="font-size: 1.5em; color:black;">Minecraft</span> </h1>
     <button onclick="buttonClick()">Play</button>
 </body>
 
@@ -44,45 +45,77 @@
     //     console.log(parameter + ' - printed with a function')
     //    }
 
-    function buttonClick(){
+    let counter = 1
+    let r = 100
+    let g = 85
+    let b = 231
+    let o = 1
+    const colors = [r, g, b, o]
+    
+
+    loginCheck(counter)
+
+    function buttonClick() {
         console.log('Button Clicked!')
+        let ender_dragon = 'one in the end'
+        let players = 3
+        let cows = 96
+        let pigs = 84
+        let chikens = 108
+        let zombie = 21
+        let enderman = 16
+        let pigman = 35
+        let zombiepigman = 14
+        let player_speed = 9.7
+        let SPEED_POTION = 2
+        if (SPEED_POTION > 1) {
+            player_speed = 10.9
+        }
+        if (zombiepigman == 15) [
+            players = 2
+        ]
+        console.log(ender_dragon)
+        console.log('enderman amount: ' + enderman)
+        console.log(zombie)
+
+
+        console.log('zombiepigman amount: ' + zombiepigman)
+        console.log(player_speed)
+
+        let number_of_creatures = [cows, pigs, chikens, zombie, enderman, pigman, zombiepigman]
+
+        console.log(number_of_creatures)
+
+        let all_creatures = 0
+        for (let i = 0; i < number_of_creatures.length; i++) {
+            all_creatures = all_creatures + number_of_creatures[i]
+        }
+
+        console.log(all_creatures)
+
+        counter++
+        loginCheck(counter)
     }
 
-    let ender_dragon = 'one in the end'
-    let players = 3
-    let cows = 96
-    let pigs = 84
-    let chikens = 108
-    let zombie = 21
-    let enderman = 16
-    let pigman = 35
-    let zombiepigman = 14
-    let player_speed = 9.7
-    let SPEED_POTION = 2
-    if (SPEED_POTION > 1) {
-        player_speed = 10.9
-    }
-    if (zombiepigman == 15)[
-        players = 2  
-    ]
-    console.log(ender_dragon)
-    console.log ('enderman amount: '+ enderman)
-    console.log(zombie)
-    
-
-    console.log( 'zombiepigman amount: '+ zombiepigman)
-    console.log(player_speed)
-    
-    let number_of_creatures = [cows, pigs, chikens, zombie, enderman, pigman, zombiepigman]
-
-    console.log(number_of_creatures)
-    
-     let all_creatures = 0
-    for(let i=0; i<number_of_creatures.length;i++){
-        all_creatures = all_creatures +number_of_creatures[i]
+    function loginCheck(number) {
+        if (number >= 2) {
+            console.log('welcome to minecraft')
+            document.querySelector('#welcomeSpan').innerHTML = 'Welcome to '
+            let colorsText = 'rgb(100,41,25,0.8)'
+            document.body.style.background = colorsText
+        }
+        else {
+            console.log('failed to join server try again later')
+            document.querySelector('#welcomeSpan').innerHTML = 'Login to '
+            let colorsText = 'rgb(' + colors.join() +')'
+            document.body.style.background = colorsText
+        }
     }
 
-    console.log(all_creatures)
+
+
+
+
 </script>
 
 </html>
