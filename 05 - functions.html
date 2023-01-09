@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript - For Loop</title>
+</head>
+
+<body style="background-color: rgb(100, 85, 231); color: rgb(0, 0, 0);">
+    <!-- Content here -->
+    <div id="result"></div>
+    <h1 style="color: yellow;">Learn <span style="font-size: 1.5em; color:black;">Function</span> </h1> 
+    <button onclick="changeColorsButtonClick()">Print Colors</button>
+</body>
+
+<!-- Scripts goes here -->
+<script>
+    let red = 25
+    let green = 1
+    let blue = 55
+    const colours = [red, green, blue]
+    console.log(colours)
+    
+    changeColorsTest()
+    changeColors(colours)
+
+    function changeColorsTest(){
+        console.log('Call changeColors function test')
+    }
+
+    function changeColors(arr){
+        let list = [...arr]
+        console.log('Call changeColors function')
+        list.push(0.65)
+        console.log('New list: ' + list)
+        for(let i=0;i<list.length;i++){
+            console.log(list[i])
+        }
+        
+        // rgb color : rgb(80,100,55)
+        let colorsText = 'rgb(' + list.join() + ')'
+        console.log(colorsText)
+
+        document.body.style.background = colorsText
+    }
+
+    function changeColorsButtonClick(){
+        let r = 25
+        let g = 20
+        let b = 80
+        let o = 0.7
+        const colors = [r, g, b, o]
+        console.log('Call changeColorsButtonClick function')
+        // rgb color : rgb(80, 100, 55, 0.2)
+        let colorsText = 'rgb(' + colors.join() + ')'
+        document.body.style.background = colorsText
+    }
+</script>
+
+</html>
