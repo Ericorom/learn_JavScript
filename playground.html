@@ -12,7 +12,9 @@
             style="font-size: 1.5em; color:black;">Minecraft</span> </h1>
     <button onclick="buttonClick()">Play</button>
 </body>
-
+ 
+    
+</body>
 <!-- Scripts goes here -->
 <script>
     'use strict'
@@ -58,15 +60,15 @@
     function buttonClick() {
         console.log('Button Clicked!')
         let ender_dragon = 'one enderdragon in the end'
-        let players = '3 players'
-        let cows = '96 cows'
-        let pigs = '84 pigs'
-        let chikens = '108 chikens'
-        let zombie = '21 zombie'
-        let enderman = '16 enderman'
-        let pigman = '35 pigman'
-        let zombiepigman = '14 zombiepigman'
-        let player_speed = '9.7 player speed' 
+        let players = 3 
+        let cows = 96 
+        let pigs = 84 
+        let chikens = 100
+        let zombie = 21 
+        let enderman = 16 
+        let pigman = 35 
+        let zombiepigman = 14
+        let player_speed = 9.7  
         let SPEED_POTION = 2
         if (SPEED_POTION > 1) {
             player_speed = 10.9
@@ -111,6 +113,55 @@
             document.body.style.background = colorsText
         }
     }
+     let online_players = [ 4, 'players online',  'craftie', 'you', 'mr beast', 'preston']
+    console.log(online_players)
+   
+  // Get the <body> element from the HTML document
+    const body = document.querySelector('body');
+    
+    // Create an array of colors to loop through
+    const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    
+    // Create a variable to keep track of the current color index
+    let colorIndex = 0;
+    
+    // Define a function to change the background color
+    function changeBackgroundColor() {
+      // Set the background color to the current color in the array
+      body.style.backgroundColor = colors[colorIndex];
+    
+      // Increment the color index
+      colorIndex++;
+    
+      // If we've reached the end of the array, start over from the beginning
+      if (colorIndex === colors.length) {
+        colorIndex = 0;
+      }
+    }
+    
+    // Call the changeBackgroundColor function every 1 second using setInterval
+    setInterval(changeBackgroundColor, 1000);
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
